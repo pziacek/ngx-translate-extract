@@ -1,15 +1,16 @@
 {
-  "name": "@vendure/ngx-translate-extract",
-  "version": "8.2.3",
+  "name": "@pziacek/ngx-translate-extract",
+  "version": "1.0.0",
   "description": "Extract strings from projects using ngx-translate",
-  "author": "Kim Biesbjerg <kim@biesbjerg.com>",
+  "author": "Kim Biesbjerg <kim@biesbjerg.com>, Fork author: Pavol Ziacek",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "watch": "rimraf ./dist && tsc --watch",
     "test": "ts-mocha -p tsconfig.spec.json tests/**/*.spec.ts",
-    "lint": "eslint ./src/**/*.ts"
+    "lint": "eslint ./src/**/*.ts",
+	"npm-publish": "npm run build && npm publish --access public"
   },
   "dependencies": {
     "@phenomnomnominal/tsquery": "^5.0.1",

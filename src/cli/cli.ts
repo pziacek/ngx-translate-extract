@@ -86,6 +86,11 @@ export const cli: any = y // temporary any
 		type: 'string',
 		default: undefined
 	})
+	.option('verbose', {
+		alias: 've',
+		describe: 'Show verbose information',
+		type: 'boolean'
+	})
 	.option('key-as-default-value', {
 		alias: 'k',
 		describe: 'Use key as default value',
@@ -118,7 +123,8 @@ export const cli: any = y // temporary any
 	.parse(process.argv);
 
 const extractTask = new ExtractTask(cli.input, cli.output, {
-	replace: cli.replace
+	replace: cli.replace,
+	verbose: cli.verbose
 });
 
 // Parsers

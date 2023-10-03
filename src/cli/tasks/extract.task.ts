@@ -13,11 +13,13 @@ const { sync } = pkg;
 
 export interface ExtractTaskOptionsInterface {
 	replace?: boolean;
+	verbose?: boolean;
 }
 
 export class ExtractTask implements TaskInterface {
 	protected options: ExtractTaskOptionsInterface = {
-		replace: false
+		replace: false,
+		verbose: false
 	};
 
 	protected parsers: ParserInterface[] = [];
@@ -111,12 +113,23 @@ export class ExtractTask implements TaskInterface {
 			this.getFiles(pattern).forEach((filePath) => {
 				this.out(dim('- %s'), filePath);
 				const contents: string = fs.readFileSync(filePath, 'utf-8');
+
+				let fileCollection: TranslationCollection = new TranslationCollection();
+
 				this.parsers.forEach((parser) => {
 					const extracted = parser.extract(contents, filePath);
 					if (extracted instanceof TranslationCollection) {
 						collection = collection.union(extracted);
+						fileCollection = fileCollection.union(extracted);
 					}
 				});
+
+				if (this.options.verbose) {
+					// this.out(dim('  Found strings:'));
+					fileCollection.keys().forEach( colKey => {
+						this.out(dim('  %s'), colKey);
+					});
+				}
 			});
 		});
 		return collection;
