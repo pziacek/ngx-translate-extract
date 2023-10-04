@@ -4,14 +4,14 @@
 
 > ✓ _Angular 14, Ivy and Angular Universal (SSR) compatible_
 
-Extract translatable (ngx-translate) strings and save as a JSON or Gettext pot file.
-Merges with existing strings if the output file already exists.
+Extract translatable (ngx-translate) strings and save as a JSON or Gettext pot file.\
+Merges with existing strings if the output file already exists.\
 Includes extra verbose information about the extraction process when --verbose cli param is provided. 
 
 ## History
 
 This project was originally created by [Kim Biesbjerg](https://github.com/biesbjerg/ngx-translate-extract).
-Unfortunately he was unable to continue to maintain it so the Vendure team agreed to take over maintenance of a fork.
+Unfortunately he was unable to continue to maintain it so the Vendure team agreed to take over maintenance of a fork.\
 This fork further improves the Vendure team fork. Ensures the support of the custom self closing tags in the html files and 
 extends the plugin cli options e.g. with possibility to turn on verbose information about the extraction process. 
 
@@ -20,9 +20,9 @@ extends the plugin cli options e.g. with possibility to turn on verbose informat
 Install the package in your project:
 
 ```bash
-npm install @vendure/ngx-translate-extract --save-dev
+npm install @pziacek/ngx-translate-extract --save-dev
 # or
-yarn add @vendure/ngx-translate-extract --dev
+yarn add @pziacek/ngx-translate-extract --dev
 ```
 
 Choose the version corresponding to your Angular version:
