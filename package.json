@@ -1,6 +1,6 @@
 {
   "name": "@pziacek/ngx-translate-extract",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract strings from projects using ngx-translate",
   "author": "Kim Biesbjerg <kim@biesbjerg.com>, Fork author: Pavol Ziacek",
   "license": "MIT",
@@ -50,7 +50,7 @@
     "typescript": "^4.5.2"
   },
   "peerDependencies": {
-    "@angular/compiler": ">=13.1.2",
+    "@angular/compiler": ">=14.0.0",
     "typescript": ">=4.4.0"
   },
   "main": "dist/index.js",
@@ -70,7 +70,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:vendure-ecommerce/ngx-translate-extract.git"
+    "url": "git@github.com:pziacek/ngx-translate-extract.git"
   },
   "keywords": [
     "angular",
@@ -84,9 +84,9 @@
     "gettext"
   ],
   "bugs": {
-    "url": "https://github.com/vendure-ecommerce/ngx-translate-extract/issues"
+    "url": "https://github.com/pziacek/ngx-translate-extract/issues"
   },
-  "homepage": "https://github.com/vendure-ecommerce/ngx-translate-extract",
+  "homepage": "https://github.com/pziacek/ngx-translate-extract",
   "engines": {
     "node": ">=16",
     "npm": ">=8"
